@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ocean City menu total</title>
+  <script src="menu.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>Total: <output id="total">$0.00</output></h1>
+  <form id="order">
+    <div id="items">
+      <div><input type="text" list="menu" placeholder="Menu item" autocomplete="off"> <output></output></div>
+    </div>
+    <p>
+      <button type="button" id="add">Add item</button>
+      <button type="reset">Reset</button>
+    </p>
+  </form>
+  <datalist id="menu"></datalist>
+</body>
+</html>
