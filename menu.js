@@ -149,7 +149,7 @@ const menu = [
   { name: "Deep Fried Pork Rib Sweet and Sour", price: 19.20 },
   { name: "Sweet and Sour Fish Pieces", price: 19.20 },
   { name: "Sweet and Sour Fried Short Soup", price: 19.20 },
-  { name: "Combination Sweet and Sour", price: 19.20 },
+  { name: "Combination Sweet and Sour", price: 20.80 },
   { name: "Braised Beef Sweet and Sour", price: 20.80 },
   { name: "Sweet and Sour Pork", price: 19.20 },
 
