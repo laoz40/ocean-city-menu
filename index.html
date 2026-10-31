@@ -11,7 +11,22 @@
   <h1>Total: <output id="total">$0.00</output></h1>
   <form id="order">
     <div id="items">
-      <div><input type="text" list="menu" placeholder="Menu item" autocomplete="off"> <output></output></div>
+      <div>
+        <input type="text" list="menu" placeholder="Menu item" autocomplete="off">
+        <select aria-label="Quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <output></output>
+      </div>
     </div>
     <p>
       <button type="button" id="add">Add item</button>

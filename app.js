@@ -47,10 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
         continue;
       }
 
-      const priceInDollars = priceInCents / 100;
+      const quantity = Number(input.parentElement.querySelector('select').value);
+      const rowTotalInCents = priceInCents * quantity;
+      const priceInDollars = rowTotalInCents / 100;
 
       priceOutput.value = '$' + priceInDollars.toFixed(2);
-      totalInCents += priceInCents;
+      totalInCents += rowTotalInCents;
     }
 
     const totalInDollars = totalInCents / 100;
@@ -62,6 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const newRow = document.createElement('div');
     const newInput = document.createElement('input');
     const newPriceOutput = document.createElement('output');
+    const newQuantitySelect = itemRows.querySelector('select').cloneNode(true);
+
+    newQuantitySelect.value = '1';
 
     newInput.type = 'text';
     newInput.placeholder = 'Menu item';
@@ -70,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Give each new input the same menu suggestions as the first input.
     newInput.setAttribute('list', 'menu');
 
-    newRow.append(newInput, ' ', newPriceOutput);
+    newRow.append(newInput, ' ', newQuantitySelect, ' ', newPriceOutput);
     itemRows.append(newRow);
 
     newInput.focus();
@@ -87,12 +92,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const firstInput = itemRows.querySelector('input');
 
     firstInput.value = '';
+    itemRows.querySelector('select').value = '1';
 
     updateTotal();
   }
 
   // Connect the page actions to their functions.
   itemRows.addEventListener('input', updateTotal);
+  itemRows.addEventListener('change', updateTotal);
   addButton.addEventListener('click', addItem);
   orderForm.addEventListener('reset', resetOrder);
 
