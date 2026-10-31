@@ -1,4 +1,7 @@
 const menu = [
+  { name: "Lunch Special", price: 13.50 },
+  { name: "Lunch Special (Dinner Price)", price: 16.50 },
+
   { name: "Seafood Combination with Sizzling", price: 23.50 },
   { name: "Seafood Combination with Ginger and Shallots", price: 23.50 },
   { name: "Seafood Combination in Garlic Sauce", price: 23.50 },
